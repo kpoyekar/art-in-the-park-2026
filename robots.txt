@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://artinthepark.elkader.city/sitemap.xml
