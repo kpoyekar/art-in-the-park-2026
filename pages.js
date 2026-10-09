@@ -57,8 +57,13 @@
   /* the ownership line. The design is the studio's; the artwork stays with the artists —
      40-odd booths' worth of photographs are theirs, not ours to claim. The year comes
      off the event itself, so it stays the 2026 edition's line and not the clock's. */
-  D.copyright = function (cls) {
-    return '<p class="copy' + (cls ? " " + cls : "") + '">Website design \u00A9 ' + D.event.start.slice(0, 4) + ' K8Ki Studio' +
+  /* the studio is only linked where nothing else links it. In the menu the credit
+     sits right above this line and carries the link already. */
+  D.copyright = function (cls, link) {
+    var studio = link
+      ? '<a class="copy-link" href="https://www.studiok8ki.com" target="_blank" rel="noopener">K8Ki Studio</a>'
+      : "K8Ki Studio";
+    return '<p class="copy' + (cls ? " " + cls : "") + '">Website design \u00A9 ' + D.event.start.slice(0, 4) + " " + studio +
       '<span class="copy-sep">\u00B7</span>Artwork \u00A9 the individual artists</p>';
   };
 
@@ -512,7 +517,7 @@
         /* the weekend the rain stopped, beside the practical part */
         '<figure class="c-shot"><img src="assets/event/rainbow-letters.jpg" alt="The denim ART IN THE PARK letters standing on the grass, a rainbow arching over the white vendor tents and the Elkader grain elevator behind them" loading="lazy">' +
         '<figcaption class="c-credit">Photo by Brian Gibbs</figcaption></figure>' +
-        "</div></div>" + D.copyright("contact-copy") + "</div>";
+        "</div></div>" + D.copyright("contact-copy", true) + "</div>";
     },
     sponsors: function () {
       var T = D.sponsors;

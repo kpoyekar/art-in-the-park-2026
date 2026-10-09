@@ -728,6 +728,8 @@ body{display:grid;grid-template-rows:auto auto 1fr;height:100dvh;background:var(
 .copy{margin:16px 0 0;font:600 clamp(12px,.95vw,14px)/1.55 var(--body);letter-spacing:.02em;color:var(--muted)}
 .copy-sep{display:inline-block;padding:0 7px;opacity:.55}
 .contact-copy{margin-top:clamp(20px,3vh,36px);padding-top:16px;border-top:2px solid var(--line)}
+.copy-link{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color .15s}
+.copy-link:hover,.copy-link:focus-visible{color:var(--navy)}
 .mnav-copy{margin:14px 0 0;text-align:center;color:var(--on-dark-soft)}
 @media (max-width:420px){.copy-sep{display:block;height:0;overflow:hidden;padding:0}}
 .mnav .pwr{justify-items:center;gap:6px}
