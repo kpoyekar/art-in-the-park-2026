@@ -724,6 +724,12 @@ body{display:grid;grid-template-rows:auto auto 1fr;height:100dvh;background:var(
 .pwr-by{font:800 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase}
 .pwr-mark{display:block;width:112px;height:auto}
 .mnav-pwr{display:flex;justify-content:center}
+/* the ownership line, small and quiet in both places it appears */
+.copy{margin:16px 0 0;font:600 clamp(12px,.95vw,14px)/1.55 var(--body);letter-spacing:.02em;color:var(--muted)}
+.copy-sep{display:inline-block;padding:0 7px;opacity:.55}
+.contact-copy{margin-top:clamp(20px,3vh,36px);padding-top:16px;border-top:2px solid var(--line)}
+.mnav-copy{margin:14px 0 0;text-align:center;color:var(--on-dark-soft)}
+@media (max-width:420px){.copy-sep{display:block;height:0;overflow:hidden;padding:0}}
 .mnav .pwr{justify-items:center;gap:6px}
 .mnav .pwr-by{font-size:12px;letter-spacing:.18em}
 .mnav .pwr-mark{width:clamp(110px,34vw,150px)}

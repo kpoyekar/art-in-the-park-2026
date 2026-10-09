@@ -14,6 +14,7 @@
     $$("[data-strip-slot]").forEach(function (el) { el.innerHTML = D.strip(); });
     $$("[data-socials-slot]").forEach(function (el) { el.innerHTML = D.socials(el.getAttribute("data-socials-slot")); });
     $$("[data-powered]").forEach(function (el) { el.innerHTML = D.poweredBy(el.getAttribute("data-powered")); });
+    $$("[data-copyright]").forEach(function (el) { el.innerHTML = D.copyright(el.getAttribute("data-copyright")); });
     $$("[data-icon]").forEach(function (el) { el.innerHTML = D.icon[el.getAttribute("data-icon")] || ""; });
     $$("[data-venue]").forEach(function (el) { el.textContent = D.event.venue + ", " + D.event.town; });
     function renderBody(p) {

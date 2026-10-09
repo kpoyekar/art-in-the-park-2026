@@ -54,6 +54,15 @@
   };
   /* the studio behind the site. The mark is drawn in currentColor so it takes the
      festival's own cream wherever it sits, rather than the kit's warmer one. */
+  /* the ownership line. The festival holds the site; the artists keep their work —
+     40-odd booths' worth of photographs are theirs, not ours to claim. The year comes
+     off the event itself, so it stays the 2026 edition's line and not the clock's. */
+  D.copyright = function (cls) {
+    var org = (D.contact.orgFull || "").replace(/^the\s+/i, "");
+    return '<p class="copy' + (cls ? " " + cls : "") + '">\u00A9 ' + D.event.start.slice(0, 4) + " " + esc(org) +
+      '<span class="copy-sep">\u00B7</span>Artwork \u00A9 the individual artists</p>';
+  };
+
   D.poweredBy = function (cls) {
     return '<a class="pwr ' + (cls || "") + '" href="https://www.studiok8ki.com" target="_blank" rel="noopener" aria-label="Site by K8Ki Studio">' +
       '<span class="pwr-by">Powered by</span>' +
@@ -504,7 +513,7 @@
         /* the weekend the rain stopped, beside the practical part */
         '<figure class="c-shot"><img src="assets/event/rainbow-letters.jpg" alt="The denim ART IN THE PARK letters standing on the grass, a rainbow arching over the white vendor tents and the Elkader grain elevator behind them" loading="lazy">' +
         '<figcaption class="c-credit">Photo by Brian Gibbs</figcaption></figure>' +
-        "</div></div></div>";
+        "</div></div>" + D.copyright("contact-copy") + "</div>";
     },
     sponsors: function () {
       var T = D.sponsors;
