@@ -54,12 +54,11 @@
   };
   /* the studio behind the site. The mark is drawn in currentColor so it takes the
      festival's own cream wherever it sits, rather than the kit's warmer one. */
-  /* the ownership line. The festival holds the site; the artists keep their work —
+  /* the ownership line. The design is the studio's; the artwork stays with the artists —
      40-odd booths' worth of photographs are theirs, not ours to claim. The year comes
      off the event itself, so it stays the 2026 edition's line and not the clock's. */
   D.copyright = function (cls) {
-    var org = (D.contact.orgFull || "").replace(/^the\s+/i, "");
-    return '<p class="copy' + (cls ? " " + cls : "") + '">\u00A9 ' + D.event.start.slice(0, 4) + " " + esc(org) +
+    return '<p class="copy' + (cls ? " " + cls : "") + '">Website design \u00A9 ' + D.event.start.slice(0, 4) + ' K8Ki Studio' +
       '<span class="copy-sep">\u00B7</span>Artwork \u00A9 the individual artists</p>';
   };
 
